@@ -14,6 +14,40 @@ module.exports = {
         use: ["babel-loader"],
         exclude: /node_modules/,
       },
+      {
+        test: /\.(scss)$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              url: false,
+              importLoaders: 2,
+              modules: {
+                localIdentName: "[path][name]__[local]--[hash:base64:5]",
+              },
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["autoprefixer"],
+              },
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              implementation: require("sass"),
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(gif|png|jpg|svg)$/,
+        type: "asset/inline",
+      },
     ],
   },
   resolve: {

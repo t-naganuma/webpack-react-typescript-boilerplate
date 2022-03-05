@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import styles from "./index.scss"
 
 const App = () => {
+  console.log(styles.div)
   return (
-    <div>
+    <div className={styles.div}>
       Hello
     </div>
   )

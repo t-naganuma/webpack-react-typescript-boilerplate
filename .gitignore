@@ -4,3 +4,4 @@ node_modules/
 Thumbs.db
 .vscode
 dist/
+*.scss.d.ts
