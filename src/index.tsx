@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className={styles.div}>
       <Header id="header" name="Bob" />
-      Hello
+      Hello World
     </div>
   )
 };

@@ -67,5 +67,10 @@ module.exports = {
       filename: "index.html",
     }),
   ],
-  devServer: {},
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    open: true,
+  },
 };
