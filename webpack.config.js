@@ -11,8 +11,18 @@ module.exports = {
     rules: [
       {
         test: /\.*(ts|tsx)$/,
-        use: ["babel-loader"],
         exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
+          },
+          {
+            loader: "ts-loader",
+            options: {
+              configFile: "tsconfig.json",
+            },
+          },
+        ],
       },
       {
         test: /\.(scss)$/i,
