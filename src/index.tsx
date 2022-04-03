@@ -2,24 +2,31 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styles from "./index.scss"
 
-type Props ={
-  id: string,
-  name: string
+const Header = () => {
+  return <header className={styles.header}>Header</header>
 }
 
-const Header = (props: Props) => {
-  const id = props.id;
-  const name = props.name;
+const Main = ({name}: {name: string}) => {
   return (
-    <header id={id}>{name}</header>
+    <main className={styles.main}>
+      <section>
+        <div>Main</div>
+        <p className={styles.name}>Hello, {name}</p>
+      </section>
+    </main>
   )
+}
+
+const Footer = () => {
+  return <footer className={styles.footer}>footer</footer>
 }
 
 const App = () => {
   return (
-    <div className={styles.div}>
-      <Header id="header" name="Bob" />
-      Hello World
+    <div className={styles.wrapper}>
+      <Header />
+      <Main name="webpack" />
+      <Footer />
     </div>
   )
 };

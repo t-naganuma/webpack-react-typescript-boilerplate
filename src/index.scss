@@ -1,4 +1,20 @@
-.div {
+.wrapper {
+  width: 100%;
+}
+.header {
+  font-size: 20px;
+  padding: 16px 8px;
+  width: 100%;
+}
+.main {
+  background-color: #ccc;
+  width: 100%;
+}
+.name {
   background-color: gray;
   display: grid;
+}
+.footer {
+  background-color: #ccc;
+  padding: 16px 8px;
 }

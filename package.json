@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development",
+    "dev": "webpack-dev-server --mode=development & npm run tsm",
     "build": "webpack --mode=production",
     "tsm": "typed-scss-modules src --watch --implementation sass --nameFormat none"
   },
