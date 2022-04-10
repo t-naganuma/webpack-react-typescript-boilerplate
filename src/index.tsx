@@ -6,7 +6,7 @@ function Header() {
   return <header className={styles.header}>Header</header>;
 }
 
-function Main({ name }: {name: string}) {
+function Main({ name }: { name: string }) {
   return (
     <main className={styles.main}>
       <section>
@@ -34,7 +34,4 @@ function App() {
   );
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app'),
-);
+ReactDOM.render(<App />, document.getElementById('app'));

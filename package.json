@@ -9,6 +9,7 @@
     "tsm": "typed-scss-modules src --watch --implementation sass --nameFormat none",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:conflict": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "preinstall": "typesync | :"
   },
   "repository": {
@@ -31,6 +32,7 @@
     "css-loader": "^6.7.0",
     "eslint": "^8.13.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
@@ -38,6 +40,7 @@
     "html-webpack-plugin": "^5.5.0",
     "postcss": "^8.4.12",
     "postcss-loader": "^6.2.1",
+    "prettier": "^2.6.2",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
