@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './index.scss';
 
-function Header() {
+const Header = () => {
   return <header className={styles.header}>Header</header>;
-}
+};
 
-function Main({ name }: { name: string }) {
+const Main = ({ name }: { name: string }) => {
   return (
     <main className={styles.main}>
       <section>
@@ -18,13 +18,13 @@ function Main({ name }: { name: string }) {
       </section>
     </main>
   );
-}
+};
 
-function Footer() {
+const Footer = () => {
   return <footer className={styles.footer}>footer</footer>;
-}
+};
 
-function App() {
+const App = () => {
   return (
     <div className={styles.wrapper}>
       <Header />
@@ -32,6 +32,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 ReactDOM.render(<App />, document.getElementById('app'));
