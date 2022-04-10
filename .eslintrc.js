@@ -4,83 +4,83 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    "plugin:react/recommended",
-    "airbnb",
-    "airbnb/hooks",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier"
+    'plugin:react/recommended',
+    'airbnb',
+    'airbnb/hooks',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    project: "./tsconfig.eslint.json",
+    ecmaVersion: 'latest',
+    project: './tsconfig.eslint.json',
     tsconfigRootdir: __dirname,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  plugins: ["@typescript-eslint", "import", "jsx-a11y", "react", "react-hooks"],
+  plugins: ['@typescript-eslint', 'import', 'jsx-a11y', 'react', 'react-hooks'],
   root: true,
   rules: {
-    "lines-between-class-members": [
-      "error",
-      "always",
+    'lines-between-class-members': [
+      'error',
+      'always',
       {
         exceptAfterSingleLine: true,
       },
     ],
-    "no-void": [
-      "error",
+    'no-void': [
+      'error',
       {
         allowAsStatement: true,
       },
     ],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
+    '@typescript-eslint/no-unused-vars': [
+      'error',
       {
-        vars: "all",
-        args: "after-used",
-        argsIgnorePattern: "_",
+        vars: 'all',
+        args: 'after-used',
+        argsIgnorePattern: '_',
         ignoreRestSiblings: false,
-        varsIgnorePattern: "_",
+        varsIgnorePattern: '_',
       },
     ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
+    'import/extensions': [
+      'error',
+      'ignorePackages',
       {
-        js: "never",
-        jsx: "never",
-        ts: "never",
-        tsx: "never",
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
       },
     ],
-    "react/jsx-filename-extension": [
-      "error",
+    'react/jsx-filename-extension': [
+      'error',
       {
-        extensions: [".jsx", ".tsx"],
+        extensions: ['.jsx', '.tsx'],
       },
     ],
-    "react/react-in-jsx-scope": "off",
+    'react/react-in-jsx-scope': 'off',
   },
   overrides: [
     {
-      files: ["*.tsx"],
+      files: ['*.tsx'],
       rules: {
-        "react/prop-types": "off",
+        'react/prop-types': 'off',
       },
     },
   ],
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        paths: ["src"],
+        paths: ['src'],
       },
     },
   },
